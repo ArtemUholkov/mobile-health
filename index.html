@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile HealthCare - therapies</title>
+    <meta name="description" content="Affordable therapies personalized for you" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="img/global/favicon-32x32.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_wrapper mycontainer">
+        <nav class="navbar">
+          <ul class="navbar_menu">
+            <li><a class="nav_elem" href="#our-products">Our Products</a></li>
+            <li><a class="nav_elem" href="#benefits">Benefits</a></li>
+            <li><a class="nav_elem" href="#how-it-works">How it Works?</a></li>
+            <li><a class="nav_elem" href="#why-choose-us">Why Choose Us?</a></li>
+            <li><a class="nav_elem" href="#testimonials">Testimonials</a></li>
+          </ul>
+          <a href="#" class="logo_wrapper">
+            <img src="img/global/logo.png" alt="logo" class="main-logo logo-white" />
+            <img src="img/global/logo.png" alt="logo" class="main-logo logo-hide logo-color" />
+          </a>
+
+          <div class="header_button_pair">
+            <a href="tel:2014794596" class="phone-link phone-link-desktop">(201) 479 - 4596</a>
+            <a href="#contact" class="main_button" onclick="scrollToSub()">Book Appointment</a>
+          </div>
+          <div class="burger">
+            <div class="burger_space" id="burger">
+              <span class="stick"></span>
+              <span class="stick"></span>
+              <span class="stick"></span>
+            </div>
+          </div>
+        </nav>
+        <div class="popup" id="popup">
+          <!-- <img src="img/main/mobbgmenu.png" alt="moblogo" class="mob_menu_bgimage" /> -->
+          <div class="popup_textblock" id="popupSlide">
+            <ul class="navbar_menu_mobile">
+              <li>
+                <a href="#about-us" class="nav_elem_mobile">About Us</a>
+              </li>
+              <li>
+                <a href="#how-to-start" class="nav_elem_mobile">How to start</a>
+              </li>
+              <li><a href="#benefits" class="nav_elem_mobile">Benefits</a></li>
+              <li>
+                <a href="#reviews" class="nav_elem_mobile">Reviews</a>
+              </li>
+            </ul>
+            <div class="header_button_pair mob_menu_buttons">
+              <a href="#contact" class="main_button mob_button mob_menu_button">Book Appointment</a>
+              <a href="tel:2014794596" class="phone-link phone-link-mob">(201) 479 - 4596</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="main_container">
+        <h1 class="main_title">
+          We are a <span>primary care clinic</span> which supports your complete health
+        </h1>
+        <p class="main_subtitle">
+          Services we provide: wellness visits, sick visits, managements of chronic disease
+          conditions, sport physicals, vaccinations, and DOT exams.
+        </p>
+        <div class="main_video_wrapper">
+          <video class="main_video_mask main_video_desktop" muted loop playsinline>
+            <source src="img/main/deskvideo.mp4" type="video/mp4" />
+            <!-- Fallback image if video doesn't load -->
+            <img src="img/main/Subtract.png" alt="main_img" class="main_img_mask" />
+          </video>
+          <video class="main_video_mask main_video_mobile" muted loop playsinline>
+            <source src="img/main/mobvideo.mp4" type="video/mp4" />
+            <!-- Fallback image if video doesn't load -->
+            <img src="img/main/Subtract.png" alt="main_img" class="main_img_mask" />
+          </video>
+          <div class="doc-text_wrapper">
+            <img src="img/main/doc.png" alt="" class="doc-img" />
+            <div class="doc_texts">
+              <p class="doc_title">
+                Comprehensive Care,<br>Wherever You Are
+              </p>
+              <ul class="doc_list">
+                <li class="doc_list_item">In-office services<br>available</li>
+                <li class="doc_list_item">Telehealth<br>consultations</li>
+                <li class="doc_list_item">Doorstep care<br>coming soon</li>
+            </div>
+          </div>
+          <p class="main_subtitle mob_subtitle">
+            Services we provide: wellness visits, sick visits, managements of chronic disease
+            conditions, sport physicals, vaccinations, and DOT exams.
+          </p>
+          <a href="#contact" class="main_button main_button_mob-main">Book Appointment</a>
+        </div>
+      </div>
+    </section>
+    <section class="invest"></section>
+    <section class="therapies"></section>
+    <section class="hiw"></section>
+    <section class="why"></section>
+    <section class="testi"></section>
+    <section class="faq"></section>
+    <footer class="footer"></footer>
+    <script src="js/header.js"></script>
+    <script>
+      // Video switching based on screen size
+      function switchVideo() {
+        const desktopVideo = document.querySelector('.main_video_desktop');
+        const mobileVideo = document.querySelector('.main_video_mobile');
+        
+        if (window.innerWidth <= 1100) {
+          // Mobile view
+          desktopVideo.style.display = 'none';
+          mobileVideo.style.display = 'block';
+          desktopVideo.pause();
+          mobileVideo.play();
+        } else {
+          // Desktop view
+          desktopVideo.style.display = 'block';
+          mobileVideo.style.display = 'none';
+          mobileVideo.pause();
+          desktopVideo.play();
+        }
+      }
+      
+      // Run on page load
+      document.addEventListener('DOMContentLoaded', switchVideo);
+      
+      // Run on window resize
+      window.addEventListener('resize', switchVideo);
+    </script>
+  </body>
+</html>

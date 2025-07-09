@@ -1,0 +1,430 @@
+header {
+  /* background-color: transparent; */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s;
+  /* border-bottom: 1px solid; */
+  /* border-bottom: 1.5px solid #757778; */
+  background: #fff2f7;
+  background-image: url('../images/global/stroke.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+}
+
+.header_wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 10px;
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+}
+
+.stick {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #d46381;
+  transition: 0.2s;
+}
+.logo_wrapper {
+  cursor: pointer;
+  z-index: 100;
+}
+.main-logo {
+  height: 92px;
+  width: auto;
+}
+.logo-color {
+  height: 92px;
+  width: auto;
+  /* max-height: 58px; */
+  z-index: 100;
+  /* animation-duration: 0.5s;
+    animation-name: fadelogoin;
+    animation-timing-function: linear; */
+}
+.logo-hide {
+  display: none;
+}
+.burger {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+.navbar_menu {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 441px;
+}
+.nav_elem {
+  color: var(--www-mobilehealthcarefc-com-night-rider, var(--color-red-5, #140808));
+  padding: 0 15px;
+  /* www.mobilehealthcarefc.com/Red Rose/Regular */
+  font-family: var(--font-family-Font-1, 'Red Rose');
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: var(--font-weight-400, 400);
+  line-height: normal;
+  letter-spacing: var(--letter-spacing-0_48, 0.48px);
+  position: relative;
+}
+.nav_elem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #d46381;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.header_button_pair {
+  max-width: 441px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.nav_elem:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  color: var(--Light, #d46381);
+  text-decoration: none;
+}
+.nav_elem:hover::after {
+  width: 90%;
+}
+.main_button {
+  border-radius: 6px;
+  background: #d46381;
+  padding: 18.5px 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  color: var(--www-mobilehealthcarefc-com-white, var(--color-white-solid, #fff));
+  text-align: center;
+  font-family: Poppins;
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.main_button:hover {
+  background: var(--color-rose-42, #9b3d57);
+
+  transition: all 0.3s ease;
+}
+.phone-link {
+  color: var(--www-mobilehealthcarefc-com-boulder, var(--color-grey-46, #757575));
+  /* www.mobilehealthcarefc.com/Semantic/Label */
+  font-family: var(--font-family-Font-1, 'Red Rose');
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: var(--font-weight-400, 400);
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.phone-link:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1620px) {
+  .header_wrapper {
+    padding: 16px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .header_wrapper {
+    padding: 0px 20px 0px 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header_button_pair {
+    width: auto;
+    max-width: initial;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar_menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .stick {
+    display: block;
+    width: 32px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #d46381;
+    transition: 0.2s;
+    border-radius: 3px;
+  }
+
+  .burger_space {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  .logo_wrapper {
+    padding: 10px 0px;
+  }
+
+  .popup {
+    position: absolute;
+    right: 100%;
+    width: 100%;
+    height: calc(100svh - 112px);
+    top: 112px;
+    z-index: 50;
+    display: none;
+    overflow: hidden;
+
+    justify-content: flex-end;
+    background-color: var(--light-gray, #fff);
+  }
+
+  .popup.open {
+    position: fixed;
+    left: 0;
+    display: flex;
+    animation-duration: 0.3s;
+    animation-name: fadein;
+    animation-timing-function: linear;
+  }
+
+  @keyframes fadein {
+    from {
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    to {
+      background-color: #fff;
+    }
+  }
+
+  .popup_textblock {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    background-color: var(--sub-bg-color);
+
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    background: url('../img/main/mobgbmenu.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+  }
+  .mob_menu_bgimage {
+    display: block;
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+  }
+
+  .navbar_menu_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 50px;
+    gap: 32px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    list-style: none;
+
+    max-width: 200px;
+    padding-left: 20px;
+  }
+
+  .nav_elem_mobile {
+    color: var(--www-mobilehealthcarefc-com-night-rider, var(--color-red-5, #140808));
+    font-family: var(--font-family-Font-1, 'Red Rose');
+    font-size: 20px;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: normal;
+    letter-spacing: var(--letter-spacing-0_48, 0.48px);
+  }
+
+  .nav_elem_mobile:hover {
+    /* background-color: gray; */
+    color: #140808;
+  }
+
+  .popup_textblock.slidein {
+    position: relative;
+    display: flex;
+    left: 0;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+    animation-timing-function: linear;
+  }
+
+  @keyframes fadelogoin {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadelogoout {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes slidein {
+    from {
+      left: 100%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      background-color: #fff;
+    }
+
+    to {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+}
+
+.popup.close {
+  background-color: #fff;
+  animation-name: fadeout;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.popup_textblock.slideout {
+  left: 100%;
+  animation-name: slideout;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+.burger_space.active .stick:nth-child(2) {
+  opacity: 0;
+}
+
+.burger_space.active .stick:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger_space.active .stick:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+@media (max-width: 768px) {
+  .header_button_pair {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .main_button {
+    display: none;
+  }
+  .phone-link-desktop {
+    display: none;
+  }
+  .main-logo {
+    height: 60px !important;
+    min-height: 60px;
+    transition: all 2s;
+    width: auto;
+  }
+  .logo-color {
+    height: 45px;
+    width: auto;
+    transition: all 2s;
+  }
+
+  .popup {
+    height: calc(100svh - 80px);
+    top: 80px;
+  }
+  .mob_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 20px 0 0;
+  }
+  .mob_menu_button {
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+  .fly_space {
+    top: 64px;
+    height: calc(100svh - 124px);
+  }
+  .mob_menu_buttons {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    /* padding-left: 20px; */
+  }
+}
