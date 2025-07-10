@@ -54,6 +54,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.bottle_text {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: var(--www-mobilehealthcarefc-com-vin-rouge, var(--color-rose-42, #9b3d57));
+  font-family: Poppins;
+  font-size: var(--font-size-18, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  border-radius: 20px;
+  background: var(--color-grey-93, #eee);
+  padding: 22px 32px;
+  box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0), 0px 36px 14px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: fit-content;
 }
 .invest_bottle {
   display: block;
@@ -164,8 +186,8 @@
   box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0), 0px 36px 14px 0px rgba(0, 0, 0, 0.01),
     0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
     0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 530px;
+  /* overflow: hidden; */
+  max-width: 540px;
 }
 .product_neutral_text {
   color: var(--Charcoal-gray, #111);
@@ -181,6 +203,8 @@
 .b12_content,
 .sh_content,
 .hr_content {
+  padding-left: 10px;
+  padding-bottom: 10px;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -280,6 +304,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
+  overflow: visible;
 }
 .pr_item_img {
   width: 100px;
@@ -330,4 +355,135 @@
   max-width: 294px;
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 1650px) {
+  .products {
+    align-self: flex-end;
+  }
+  .years_exp {
+    align-self: flex-start;
+  }
+  .invest_container {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 1440px) {
+  .invest_wrapper {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .invest_text {
+    font-size: 28px;
+  }
+  .invest_text span {
+    font-size: 28px;
+  }
+  .invest_text_wrapper {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .products {
+    align-self: center;
+  }
+  .years_exp {
+    align-self: center;
+  }
+  .invest_container {
+    padding-left: 20px;
+  }
+}
+.exp-mob {
+  display: none;
+}
+@media (max-width: 768px) {
+  .years_exp {
+    display: none;
+  }
+  .exp-mob {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    z-index: 10;
+    padding: 10.831px 15.573px;
+  }
+  .years {
+    font-size: 43px;
+  }
+  .exp {
+    font-size: 12px;
+  }
+
+  .invest_bottles {
+    padding-top: 40px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    /* width: 100%; */
+    grid-template-rows: 250px 250px;
+    align-content: center;
+  }
+  .invest_bottle {
+    display: block;
+    margin: 0 auto;
+  }
+  .bottle1 {
+    width: 110px;
+    height: auto;
+    transform: rotate(-15.32deg);
+    position: relative;
+    z-index: 3;
+    margin-right: -15px;
+  }
+  .bottle2 {
+    width: 115px;
+    height: auto;
+    transform: rotate(2.863deg);
+    position: relative;
+    top: 40px;
+    z-index: 4;
+  }
+  .bottle3 {
+    width: 180px;
+    height: auto;
+    transform: rotate(-13.894deg);
+    position: relative;
+    z-index: 3;
+  }
+  .bottle4 {
+    width: 120px;
+    height: auto;
+    transform: rotate(20.59deg);
+    position: relative;
+    z-index: 4;
+  }
+  .invest {
+    padding: 120px 0 0 0;
+  }
+  .invest_title {
+    margin-bottom: 22px;
+  }
+  .invest_text {
+    font-size: 32px;
+  }
+  .invest_text span {
+    font-size: 32px;
+  }
+  .invest_wrapper {
+    gap: 160px;
+  }
+  .bottle_text {
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 14px;
+    width: fit-content;
+  }
 }
