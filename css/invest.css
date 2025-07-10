@@ -1,4 +1,333 @@
-/* Invest Section Styles */
 .invest {
-  /* Invest section specific styles will go here */
+  padding: 180px 0 400px 0;
+}
+.invest_container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.invest_title {
+  border-radius: 56px;
+  border: 1px solid var(--color-grey-96, #ffebf3);
+  background: var(--color-grey-96, #ffebf3);
+  padding: 16px 32px;
+  color: #d46381;
+  text-align: center;
+  font-family: Poppins;
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: normal;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.invest_text {
+  color: var(--www-mobilehealthcarefc-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 35.2px */
+  text-transform: uppercase;
+}
+.invest_text span {
+  color: var(--www-mobilehealthcarefc-com-charm, var(--color-rose-61, #d46381));
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+.invest_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  height: 800px;
+}
+.invest_bottles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invest_bottle {
+  display: block;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Blur effect for non-active bottles when any bottle is clicked */
+.invest_bottles.has-active .invest_bottle:not(.clicked) {
+  filter: blur(1px);
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
+}
+.bottle1 {
+  width: 139px;
+  height: 320px;
+  transform: rotate(-15.32deg);
+  position: relative;
+  z-index: 3;
+}
+.bottle2 {
+  width: 143px;
+  height: 329px;
+  transform: rotate(2.863deg);
+  position: relative;
+  top: 40px;
+  z-index: 4;
+}
+.bottle3 {
+  width: 229px;
+  height: 428px;
+  transform: rotate(13.894deg);
+  position: relative;
+  z-index: 3;
+}
+.bottle4 {
+  width: 172px;
+  height: 549px;
+  transform: rotate(-6.59deg);
+  position: relative;
+  z-index: 2;
+}
+.bottle1.clicked {
+  transform: rotate(4deg) scale(1.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.bottle2.clicked {
+  transform: rotate(-2.863deg) scale(1.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.bottle3.clicked {
+  transform: rotate(-7deg) scale(1.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.bottle4.clicked {
+  transform: rotate(6.59deg) scale(1.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.invest_text_wrapper {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+.years_exp {
+  border-radius: 20px;
+  background: var(--color-grey-93, #eee);
+  box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0), 0px 36px 14px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+}
+.years {
+  color: var(--www-mobilehealthcarefc-com-charm, var(--color-rose-61, #d46381));
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 100%;
+  line-height: 1;
+}
+.exp {
+  color: var(--www-mobilehealthcarefc-com-vin-rouge, var(--color-rose-42, #9b3d57));
+  font-family: Poppins;
+  font-size: var(--font-size-18, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  max-width: 100px;
+}
+.products {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 42px 32px 32px 32px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background: #fff;
+  box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0), 0px 36px 14px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 530px;
+}
+.product_neutral_text {
+  color: var(--Charcoal-gray, #111);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 120%;
+}
+
+/* Content sections with smooth height animation */
+.wl_content,
+.b12_content,
+.sh_content,
+.hr_content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* Show neutral text when no bottle is active */
+.products:not(.has-active-content) .product_neutral_text {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide neutral text when any bottle is active */
+.products.has-active-content .product_neutral_text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* Show content based on active bottle with delay */
+.products.has-active-content.bottle1-active .wl_content {
+  opacity: 1;
+  max-height: 600px;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  pointer-events: auto;
+}
+
+.products.has-active-content.bottle2-active .b12_content {
+  opacity: 1;
+  max-height: 600px;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  pointer-events: auto;
+}
+
+.products.has-active-content.bottle3-active .sh_content {
+  opacity: 1;
+  max-height: 600px;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  pointer-events: auto;
+}
+
+.products.has-active-content.bottle4-active .hr_content {
+  opacity: 1;
+  max-height: 600px;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  pointer-events: auto;
+}
+
+.wl_content {
+  flex-direction: column;
+  gap: 12px;
+}
+.prr_item_title {
+  color: var(--www-mobilehealthcarefc-com-black, var(--color-black-solid, #000));
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.prr_item_title span {
+  color: var(--www-mobilehealthcarefc-com-charm, var(--color-rose-61, #d46381));
+  text-align: center;
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 35.2px */
+  text-transform: uppercase;
+  text-align: center;
+}
+.wl_title {
+}
+.wl_items_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.pr_item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.pr_item_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 32px 9px 0px rgba(0, 0, 0, 0), 0px 20px 8px 0px rgba(0, 0, 0, 0),
+    0px 12px 7px 0px rgba(0, 0, 0, 0.02), 0px 5px 5px 0px rgba(0, 0, 0, 0.03),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.03);
+}
+.pr_item_title {
+  color: var(--Charcoal-gray, #111);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 345px;
+}
+.b12_content {
+}
+.b12_title {
+}
+.sh_content {
+}
+.sh_title {
+}
+.hr_content {
+}
+.hr_title {
+}
+
+.product_button {
+  width: 212px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.underbutton_text {
+  color: var(--color-rose-61, #d46381);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 294px;
+  display: block;
+  margin: 0 auto;
 }
