@@ -99,3 +99,41 @@ bottles.forEach((bottle) => {
     }
   });
 });
+
+// Therapies section interactive functionality
+const therapyItems = document.querySelectorAll('.ther_item');
+const therapyWrapper = document.querySelector('.ther_items-wrapper');
+
+therapyItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // Only allow expansion for items 1, 2, 3 (index 0, 1, 2)
+    if (index < 3) {
+      // Check if this item is already expanded
+      const isAlreadyExpanded = item.classList.contains('expanded');
+
+      // Remove expanded class from all items
+      therapyItems.forEach((therapyItem) => {
+        therapyItem.classList.remove('expanded');
+      });
+
+      // Remove fly-away class from all items
+      therapyItems.forEach((therapyItem) => {
+        therapyItem.classList.remove('fly-away');
+      });
+
+      // Remove has-expanded class from wrapper
+      therapyWrapper.classList.remove('has-expanded');
+
+      // If the item wasn't already expanded, expand it
+      if (!isAlreadyExpanded) {
+        item.classList.add('expanded');
+        therapyWrapper.classList.add('has-expanded');
+
+        // Make the left item (index 3) fly away
+        if (therapyItems[3]) {
+          therapyItems[3].classList.add('fly-away');
+        }
+      }
+    }
+  });
+});

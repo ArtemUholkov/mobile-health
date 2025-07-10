@@ -1,4 +1,123 @@
-/* Therapies Section Styles */
 .therapies {
-  /* Therapies section specific styles will go here */
+  padding: 180px 0 0 0;
+}
+.therapies_container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.therapies_text {
+  max-width: 1033px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.ther_wrapper {
+  background: url(../img/therapies/bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 50px 90px;
+  border-radius: 30px;
+}
+.ther_items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.ther_item {
+  border-radius: 20px;
+  background: #e6e6e6;
+
+  /* Card Shadow */
+  box-shadow: 0px 32px 9px 0px rgba(0, 0, 0, 0), 0px 20px 8px 0px rgba(0, 0, 0, 0),
+    0px 12px 7px 0px rgba(0, 0, 0, 0.02), 0px 5px 5px 0px rgba(0, 0, 0, 0.03),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.03);
+  width: 300px;
+  padding: 22px;
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-width: 300px;
+}
+
+/* Expanded state for items 1, 2, 3 */
+.ther_item.expanded {
+  width: 600px;
+
+  z-index: 10;
+}
+
+/* Fly away animation for left item */
+.ther_item.fly-away {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  transform: translateX(200%) rotate(15deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When any item is expanded, adjust the wrapper */
+.ther_items-wrapper.has-expanded {
+  justify-content: flex-start;
+}
+.item_title-icon_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ther_items_title {
+  color: var(--www-mobilehealthcarefc-com-charm, var(--color-rose-61, #d46381));
+  font-family: Manrope;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 24.2px */
+  text-transform: uppercase;
+}
+.ther_item_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+.title-texts_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+.ther_item_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ther_item-textitem {
+  color: var(--www-mobilehealthcarefc-com-tuna, var(--color-grey-24, #3a3c3f));
+  font-family: Poppins;
+  font-size: var(--font-size-18, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+.ther_readmore {
+  color: var(--www-mobilehealthcarefc-com-night-rider, var(--color-red-5, #140808));
+  text-align: center;
+  font-family: Poppins;
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto;
 }
