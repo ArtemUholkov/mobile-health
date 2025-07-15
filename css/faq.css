@@ -40,6 +40,7 @@
     0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
     0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   min-height: 89px;
+  cursor: pointer;
 }
 .faq_item_texts {
   display: flex;
