@@ -1,5 +1,5 @@
 .invest {
-  padding: 180px 0 400px 0;
+  padding: 180px 0 0 0;
 }
 .invest_container {
   max-width: 1600px;
@@ -485,5 +485,17 @@
     margin: 0 auto;
     font-size: 14px;
     width: fit-content;
+  }
+  .pr_item_title {
+    font-size: 16px;
+  }
+  .products {
+    padding: 22px;
+  }
+  .prr_item_title {
+    font-size: 22px;
+  }
+  .prr_item_title span {
+    font-size: 22px;
   }
 }

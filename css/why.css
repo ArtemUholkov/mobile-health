@@ -1,4 +1,70 @@
-/* Why Section Styles */
 .why {
-  /* Why section specific styles will go here */
+  padding: 180px 0 0 0;
+}
+.why_container {
+  padding: 0 20px;
+  max-width: 1490px;
+  margin: 0 auto;
+}
+.why_title {
+  margin-bottom: 50px;
+}
+.why_content_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.why_doctorimg {
+  max-width: 638px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.why_texts_wrapper {
+  max-width: 724px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.why_texts_title {
+  color: #d46381;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: normal;
+  text-transform: capitalize;
+}
+.why_texts_text {
+  color: var(--www-mobilehealthcarefc-com-tuna, var(--color-grey-24, #3a3c3f));
+  font-family: Poppins;
+  font-size: var(--font-size-18, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1140px) {
+  .why_content_wrapper {
+    flex-direction: column;
+  }
+  .why_doctorimg {
+    max-width: 100%;
+  }
+  .why_texts_wrapper {
+    max-width: 100%;
+  }
+  .why_title {
+    margin-bottom: 32px;
+  }
+  .why_texts_title {
+    font-size: 20px;
+  }
+  .why_texts_text {
+    font-size: 18px;
+  }
+  .why {
+    padding: 120px 0 0 0;
+  }
 }

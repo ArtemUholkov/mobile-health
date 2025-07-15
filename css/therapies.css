@@ -223,3 +223,98 @@
   margin: 0 auto;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (max-width: 1600px) {
+  .ther_items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+
+    gap: 20px;
+  }
+  .ther_item {
+    align-self: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .ther_item.expanded .ther_item-textitem {
+    font-size: 18px;
+  }
+  .ther_items-wrapper.has-expanded-fourth {
+    justify-content: flex-end;
+    gap: 20px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ther_items-wrapper.has-expanded {
+    justify-content: flex-start;
+    gap: 20px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ther_item {
+    min-height: 420px;
+    height: auto;
+  }
+  .ther_readmore {
+    margin-top: 20px;
+  }
+  .ther_item.expanded {
+    width: 600px;
+    /* height: 450px; */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 10;
+  }
+  .ther_wrapper {
+    padding: 20px;
+  }
+
+  /* Fly away animation for right items (4th item) */
+  .ther_item.fly-away-right {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+    pointer-events: none;
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Fly away animation for left items (1st item) */
+  .ther_item.fly-away-left {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+    pointer-events: none;
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ther_item.expanded {
+    width: 100%;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 10;
+  }
+  @media (max-width: 768px) {
+    .ther_items-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .therapies {
+      padding: 120px 0 0 0;
+    }
+    .invest_text {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    .invest_text span {
+      font-size: 22px;
+    }
+    .therapies_container {
+      padding: 0;
+    }
+  }
+}

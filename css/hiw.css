@@ -1,4 +1,164 @@
-/* How It Works Section Styles */
 .hiw {
-  /* How it works section specific styles will go here */
+  padding: 180px 0 0 0;
+}
+.hiw-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hiw-img {
+  max-width: 230px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin-bottom: 50px;
+}
+.hiw-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 20px;
+  align-items: start;
+}
+.hiw-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 31px 50px 31px 32px;
+  gap: 32px;
+  border-radius: 20px;
+  background: var(--color-white-solid, #fff);
+  box-shadow: 0px 57px 16px 0px rgba(0, 0, 0, 0), 0px 36px 14px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 9px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Expanded state - change layout */
+.hiw-item.opened {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 20px;
+  background: #a1a1a1;
+  padding: 30px 32px;
+}
+
+.hiw-item.opened .hiw_texts {
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hiw-item-img {
+  max-width: 304px;
+  height: auto;
+  border-radius: 20px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When expanded, image takes full width but keeps height */
+.hiw-item.opened .hiw-item-img {
+  max-width: 100%;
+  width: 100%;
+  height: 204px;
+  object-fit: cover;
+}
+.hiw_texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.hiw_number-title_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hiw_number {
+  color: var(--www-mobilehealthcarefc-com-vin-rouge, var(--color-rose-42, #9b3d57));
+
+  font-family: Manrope;
+  font-size: 111.304px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 122.435px */
+  text-transform: uppercase;
+}
+.hiw_title {
+  color: var(--www-mobilehealthcarefc-com-tuna, var(--color-grey-24, #3a3c3f));
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 39.6px */
+  text-transform: uppercase;
+  max-width: 272px;
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hiw-item.opened .hiw_title {
+  color: var(--color-white-solid, #fff);
+}
+.hiw_text {
+  display: none;
+  color: var(--color-white-solid, #fff);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.opened {
+}
+.opened .hiw_text {
+  display: block;
+}
+@media (max-width: 1600px) {
+  .hiw-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    /* gap: 20px; */
+    /* background: #a1a1a1; */
+    padding: 30px 32px;
+  }
+  .hiw-item-img {
+    width: 100%;
+    height: 204px;
+    object-fit: cover;
+    max-width: none;
+  }
+}
+@media (max-width: 888px) {
+  .hiw-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    /* gap: 20px; */
+    /* background: #a1a1a1; */
+    padding: 22px 22px;
+  }
+  .hiw-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hiw_number {
+    font-size: 80px;
+  }
+  .hiw_title {
+    font-size: 26px;
+  }
+  .hiw_text {
+    font-size: 18px;
+  }
+  .hiw-item.opened {
+    padding: 22px 22px;
+  }
+  .hiw {
+    padding: 120px 0 0 0;
+  }
 }
