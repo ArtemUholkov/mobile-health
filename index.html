@@ -6,6 +6,7 @@
     <title>Mobile HealthCare - therapies</title>
     <meta name="description" content="Affordable therapies personalized for you" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" href="img/global/favicon-32x32.png" />
@@ -44,14 +45,17 @@
           <div class="popup_textblock" id="popupSlide">
             <ul class="navbar_menu_mobile">
               <li>
-                <a href="#about-us" class="nav_elem_mobile">About Us</a>
+                <a href="#our-products" class="nav_elem_mobile">Our Products</a>
               </li>
               <li>
-                <a href="#how-to-start" class="nav_elem_mobile">How to start</a>
+                <a href="#benefits" class="nav_elem_mobile">Benefits</a>
               </li>
-              <li><a href="#benefits" class="nav_elem_mobile">Benefits</a></li>
+              <li><a href="#how-it-works" class="nav_elem_mobile">How it Works?</a></li>
               <li>
-                <a href="#reviews" class="nav_elem_mobile">Reviews</a>
+                <a href="#why-choose-us" class="nav_elem_mobile">Why Choose Us?</a>
+              </li>
+              <li>
+                <a href="#testimonials" class="nav_elem_mobile">Testimonials</a>
               </li>
             </ul>
             <div class="header_button_pair mob_menu_buttons">
@@ -62,7 +66,7 @@
         </div>
       </div>
     </header>
-    <section class="main">
+    <section class="main" id="about-us">
       <div class="main_container">
         <h1 class="main_title">
           We are a <span>primary care clinic</span> which supports your complete health
@@ -101,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="invest">
+    <section class="invest" id="our-products" data-aos="fade-up">
       <div class="invest_container">
         <h3 class="invest_title">Our Products</h3>
         <h2 class="invest_text">Invest in Your <span>Health</span></h2>
@@ -211,7 +215,7 @@
         </div>
       </div>
     </section>
-    <section class="therapies">
+    <section class="therapies" id="benefits" data-aos="fade-down">
       <div class="therapies_container">
         <h3 class="therapies_title invest_title">Benefits</h3>
         <h2 class="therapies_text invest_text">
@@ -344,7 +348,7 @@
         </div>
       </div>
     </section>
-    <section class="hiw">
+    <section class="hiw" id="how-it-works" data-aos="fade-up">
       <div class="hiw-container">
         <h3 class="hiw-title invest_title">How it Works?</h3>
         <img src="img/hiw/vv.png" alt="hiw-img" class="hiw-img" />
@@ -406,10 +410,11 @@
             </div>
           </div>
         </div>
+        <a href="#" class="main_button hiw_button">Get started</a>
       </div>
     </section>
 
-    <section class="why">
+    <section class="why" id="why-choose-us" data-aos="fade-down">
       <div class="why_container">
         <h3 class="why_title invest_title">Why Choose Us?</h3>
         <div class="why_content_wrapper">
@@ -433,7 +438,7 @@
         </div>
       </div>
     </section>
-    <section class="testi">
+    <section class="testi" id="testimonials" data-aos="fade-up">
       <div class="testi_container">
         <h3 class="testi_title invest_title">Testimonials</h3>
         <div class="testi_swiper swiper">
@@ -498,7 +503,7 @@
         </div>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq" data-aos="fade-down">
       <div class="faq_container">
         <h3 class="faq_title invest_title">FAQ</h3>
         <div class="faq_content_wrapper">
@@ -518,7 +523,7 @@
                     fill="#CAC6C7"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">Are these therapies safe?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -545,8 +550,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Yes, all therapies are administered by licensed healthcare professionals following
+                strict safety protocols. We personalize each treatment to your health profile to
+                ensure safety and effectiveness.
               </p>
             </div>
             <div class="faq_item">
@@ -580,7 +586,7 @@
                     fill="#CAC6C7"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">How soon will I see results?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -607,8 +613,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Results vary by therapy and individual, but many clients notice improvements within
+                a few weeks. Weight loss and hair restoration typically show visible progress after
+                6-12 weeks, while energy and sexual health benefits can often be felt sooner.
               </p>
             </div>
             <div class="faq_item">
@@ -629,7 +636,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">Do I need a prescription to start therapy?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -656,8 +663,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Some therapies require a medical consultation and prescription. Our team will guide
+                you through the evaluation process and handle all necessary documentation to make it
+                easy.
               </p>
             </div>
             <div class="faq_item">
@@ -675,7 +683,7 @@
                     fill="#CAC6C7"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">Can I combine multiple therapies?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -702,8 +710,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Some therapies require a medical consultation and prescription. Our team will guide
+                you through the evaluation process and handle all necessary documentation to make it
+                easy.
               </p>
             </div>
           </div>
@@ -723,7 +732,7 @@
                     fill="#CAC6C7"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">How often are the treatments administered?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -750,8 +759,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Treatment frequency depends on the therapy and your individual plan. For example,
+                MIC B12 injections might be weekly or biweekly, while weight loss and hair
+                restoration therapies have schedules tailored to your progress.
               </p>
             </div>
             <div class="faq_item">
@@ -777,7 +787,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">Are there any side effects?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -804,8 +814,9 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                Side effects are typically minimal and may include mild discomfort at injection
+                sites or temporary fatigue. Our medical team monitors all clients closely and
+                adjusts treatments as needed for comfort and safety.
               </p>
             </div>
             <div class="faq_item">
@@ -823,7 +834,7 @@
                     fill="#CAC6C7"
                   />
                 </svg>
-                <p class="faq_item_title">What is the cost of the therapy?</p>
+                <p class="faq_item_title">What happens during the initial consultation?</p>
                 <div class="plus-minus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -850,15 +861,16 @@
                 </div>
               </div>
               <p class="faq_item_text">
-                The cost of the therapy varies depending on the type of therapy you choose. Please
-                contact us for more information.
+                During your first visit, our specialists assess your medical history, current
+                health, and goals. This helps us design a personalized treatment plan that fits your
+                unique needs.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer_container">
         <a class="footer_logo" href="/">
           <img src="img/footer/logo.png" alt="logo" />
@@ -878,6 +890,10 @@
     <script src="js/header.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
       // Video switching based on screen size
       function switchVideo() {

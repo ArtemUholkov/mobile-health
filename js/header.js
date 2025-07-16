@@ -49,6 +49,11 @@ function burgerHandler(e) {
     }, 270);
   }
   burger.classList.toggle('active');
+  if (window.AOS) {
+    setTimeout(function () {
+      AOS.refresh();
+    }, 350);
+  }
 }
 
 const bottles = document.querySelectorAll('.invest_bottle');
@@ -594,6 +599,9 @@ const faqPlusSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="1
 const faqMinusSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none"><path d="M1.13623 1.15466H12.4462" stroke="white" stroke-width="1.46225" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 document.addEventListener('DOMContentLoaded', function () {
+  if (window.AOS) {
+    AOS.init();
+  }
   // FAQ accordion logic
   const faqItems = document.querySelectorAll('.faq_item');
   faqItems.forEach((item) => {

@@ -46,20 +46,21 @@
   min-width: 320px;
   position: relative;
 }
-.ther_item:hover {
-  background: #d46381;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.ther_item:hover .ther_items_title {
-  color: #f6f4eb;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+@media (min-width: 1024px) {
+  .ther_item:hover {
+    background: #d46381;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ther_item:hover .ther_items_title {
+    color: #f6f4eb;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.ther_item:hover .ther_readmore {
-  color: #f6f4eb;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  .ther_item:hover .ther_readmore {
+    color: #f6f4eb;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-
 /* Expanded state for items 1, 2, 3 */
 .ther_item.expanded {
   width: 600px;
