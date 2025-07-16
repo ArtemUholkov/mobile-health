@@ -68,7 +68,14 @@
 
   z-index: 10;
 }
-
+.ther_item img {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ther_item.expanded img {
+  height: 32px;
+  width: 32px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* Fly away animation for right items (4th item) */
 .ther_item.fly-away-right {
   position: absolute;
@@ -307,11 +314,11 @@
     .therapies {
       padding: 120px 0 0 0;
     }
-    .invest_text {
+    .therapies_text {
       font-size: 22px;
       margin-bottom: 40px;
     }
-    .invest_text span {
+    .therapies_text span {
       font-size: 22px;
     }
     .therapies_container {
