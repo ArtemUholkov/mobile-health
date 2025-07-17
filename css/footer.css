@@ -42,7 +42,7 @@
   line-height: normal;
 }
 .footer_socials {
-  display: flex;
+  display: none;
   gap: 19px;
 }
 @media (max-width: 1440px) {

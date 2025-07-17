@@ -600,7 +600,13 @@ const faqMinusSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="
 
 document.addEventListener('DOMContentLoaded', function () {
   if (window.AOS) {
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+      delay: 0,
+    });
   }
   // FAQ accordion logic
   const faqItems = document.querySelectorAll('.faq_item');
